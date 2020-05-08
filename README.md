@@ -10,6 +10,12 @@
   - [React Native - mobile][repo-mobile]
 
   ****
+  ## Visualize o resultado
+  - backend: [https://bethehero-server.herokuapp.com/](https://bethehero-server.herokuapp.com/)
+  - frontend: [https://bethehero-client.surge.sh](https://bethehero-client.surge.sh)
+  - mobile: [https://play.google.com/store/apps/details?id=com.betheheros](https://play.google.com/store/apps/details?id=com.betheheros)
+  
+  ***
   Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](https://github.com/marconwillian/BeTheHero_backend/blob/master/LICENSE) para mais detalhes.
 
 
