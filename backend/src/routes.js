@@ -28,11 +28,8 @@ routes.post('/ongs', celebrate({
 
 
 
-routes.get('/inscidents', celebrate({
-    [Segments.PARAMS]: Joi.object().keys({
-        id: Joi.number().required()
-    })
-}), IncidentController.index);
+routes.get('/inscidents', IncidentController.index);
+
 routes.post('/inscidents', celebrate({
     [Segments.HEADERS]: Joi.object({
         authorization: Joi.string().required(),
