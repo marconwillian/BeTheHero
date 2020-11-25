@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-  package="com.betheheros">
+  package="dev.mh4sh.betheheros">
 
     <uses-permission android:name="android.permission.INTERNET" />
 

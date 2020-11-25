@@ -129,7 +129,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.betheheros"
+        applicationId "dev.mh4sh.betheheros"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
@@ -150,11 +150,14 @@ android {
             keyAlias 'androiddebugkey'
             keyPassword 'android'
         }
+        
         release {
-            storeFile file('mykeystore.keystore')
-            storePassword '39046Fex*+!@#'
-            keyAlias 'mykeyalias'
-            keyPassword '39046Fex*+!@#'
+            if (project.hasProperty('MYAPP_RELEASE_STORE_FILE')) {
+                storeFile file(MYAPP_RELEASE_STORE_FILE)
+                storePassword MYAPP_RELEASE_STORE_PASSWORD
+                keyAlias MYAPP_RELEASE_KEY_ALIAS
+                keyPassword MYAPP_RELEASE_KEY_PASSWORD
+            }
         }
     }
     buildTypes {

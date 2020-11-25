@@ -1,4 +1,4 @@
-package com.betheheros;
+package dev.mh4sh.betheheros;
 
 import android.os.Bundle; // here
 import com.facebook.react.ReactActivity;
