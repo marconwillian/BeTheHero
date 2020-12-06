@@ -11,8 +11,8 @@
 
   ****
   ## Visualize o resultado
-  - backend: [https://bethehero-server.herokuapp.com/](https://bethehero-server.herokuapp.com/)
-  - frontend: [https://bethehero-client.surge.sh](https://bethehero-client.surge.sh)
+  - backend: [https://bethehero-server.herokuapp.com/](https://server-bethehero.marconwillian.dev)
+  - frontend: [https://bethehero-client.surge.sh](https://bethehero.marconwillian.dev)
   - mobile: [https://play.google.com/store/apps/details?id=dev.mh4sh.betheheros](https://play.google.com/store/apps/details?id=dev.mh4sh.betheheros)
   
   ***
