@@ -6,13 +6,13 @@ RUN mkdir -p /home/node/bethehero/node_modules && mkdir -p /home/node/bethehero/
 
 WORKDIR /home/node/bethehero
 
-COPY --chown=node:node ./backend/package.json ./backend/yarn.* ./
+COPY --chown=node:node ./package.json ./yarn.* ./
 
 USER node
 
 RUN yarn
 
-COPY --chown=node:node ./backend/ .
+COPY --chown=node:node ./ .
 
 EXPOSE 3000
 
