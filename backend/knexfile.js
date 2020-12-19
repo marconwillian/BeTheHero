@@ -1,7 +1,6 @@
 // Update with your config settings.
 const path = require('path');
 require('dotenv').config();
-const ola = 'ola';
 module.exports = {
 
   development: {
