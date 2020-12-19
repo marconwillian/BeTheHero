@@ -2,8 +2,6 @@
 
   ## Projeto desenvolvido na semana Semana Omnistack 11.0 
   [![License: MIT][license-image]][license-link]<br>
-  ![Deploy Develop - Test, Build & Redeploy](https://github.com/marconwillian/BeTheHero/workflows/Deploy%20Develop%20-%20Test,%20Build%20&%20Redeploy/badge.svg)<br>
-  ![Deploy - Test, Build & Redeploy](https://github.com/marconwillian/BeTheHero/workflows/Deploy%20-%20Test,%20Build%20&%20Redeploy/badge.svg)<br>
 
   Esse projeto foi feito com a intensão de platicar meus conhecimentos na stack do JavaScript.
   Este projeto foi feito com 3 técnologias basicas, que forão divididas em repositórios diferente, são elas:
