@@ -1,5 +1,5 @@
 const knex = require('knex');
-const configuration = require('../../knexfile');
+const configuration = require('../config/knexfile');
 
 const config = configuration[process.env.NODE_ENV];
 
