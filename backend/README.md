@@ -28,8 +28,7 @@
     - [![supertest (latest)](https://img.shields.io/npm/v/supertest/latest?label=SuperTest&style=flat-square)][npm-supertest] | Usado para fazer tste atravez da rota inteira.
     - [![cross-env (latest)](https://img.shields.io/npm/v/cross-env/latest?label=Cross+Env&style=flat-square)][npm-cross-env] | Usado para definir process universais.
 
-
-
+s
   ## :minidisc: Descrição
   O projeto é uma plataforma para que ongs possão fazer uma conta (Versão desktop), e poder cadastrar os casos que precisa de ajuda, exemplo titulo, descrição e o valor da ajuda, e após o cadastro, estes casos fica disponivel no app mobile para que as pessoas possão visualizar os casos da região e enviar um email ou mensagem no whatsapp para a ong, assim podendo a ajudar.
 
