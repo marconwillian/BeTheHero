@@ -13,7 +13,7 @@ app.use(errors());
 app.use((request, response) => {
     const transaction = Sentry.startTransaction({
         op: "not_find",
-        name: "Route not finded.",
+        name: "Route not found",
         data: {
             path: request.path
         },
