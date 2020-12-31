@@ -5,13 +5,11 @@ module.exports = {
     create: async (request, response) => {
         const {id} = request.body;
 
+        Sentry.setUser({ id });
         const transaction = Sentry.startTransaction(
             {
                 op: "session_create",
                 name: "Create a session of a ong",
-            },
-            {
-                userId: id
             }
         );
 

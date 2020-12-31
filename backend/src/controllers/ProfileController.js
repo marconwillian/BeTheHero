@@ -4,14 +4,11 @@ const Sentry = require('../config/sentry');
 module.exports = {
     index: async (request, response) => {
         const ong_id = request.headers.authorization;
-
+        Sentry.setUser({ id: ong_id });
         const transaction = Sentry.startTransaction(
             {
                 op: "profile_index",
                 name: "Show profile of ong",
-            },
-            {
-                userId: ong_id
             }
         );
 

@@ -24,7 +24,7 @@ module.exports = {
     create: async (request, response) => {
         const transaction = Sentry.startTransaction({
             op: "ong_create",
-            name: "Create a new point",
+            name: "Create a new ong",
             data: {
                 body: request.body
             }
@@ -43,6 +43,8 @@ module.exports = {
                 city,
                 uf
             });
+
+            
         
             return response.json({id});
         } catch (error) {
