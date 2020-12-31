@@ -11,13 +11,15 @@ app.use(express.json());
 app.use(routes);
 app.use(errors());
 app.use((request, response) => {
-    const transaction = Sentry.startTransaction({
-        op: "not_find",
-        name: "Route not found",
-        data: {
-            path: request.path
-        },
-    });
+    const transaction = Sentry.startTransaction(
+        {
+            op: "not_find",
+            name: "Route not found",
+            data: {
+                path: request.path
+            },
+        }
+    );
 
     try {
         return response.status(404).json({error: "Sorry can't find that!"})
