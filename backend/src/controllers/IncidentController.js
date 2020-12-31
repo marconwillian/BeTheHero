@@ -7,6 +7,9 @@ module.exports = {
         const transaction = Sentry.startTransaction({
             op: "incident_index",
             name: "List incidents",
+            data: {
+                page
+            }
         });
 
         try {
@@ -34,6 +37,9 @@ module.exports = {
         const transaction = Sentry.startTransaction({
             op: "incident_create",
             name: "Create a new incident",
+            data: {
+                body: request.body
+            }
         });
 
         try {
@@ -61,6 +67,9 @@ module.exports = {
         const transaction = Sentry.startTransaction({
             op: "incident_delete",
             name: "Delete a incident",
+            data: {
+                id
+            }
         });
 
         try {

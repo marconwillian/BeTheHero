@@ -25,6 +25,9 @@ module.exports = {
         const transaction = Sentry.startTransaction({
             op: "ong_create",
             name: "Create a new point",
+            data: {
+                body: request.body
+            }
         });
 
         try {

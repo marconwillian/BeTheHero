@@ -5,10 +5,15 @@ module.exports = {
     index: async (request, response) => {
         const ong_id = request.headers.authorization;
 
-        const transaction = Sentry.startTransaction({
-            op: "profile_index",
-            name: "Show profile of ong",
-        });
+        const transaction = Sentry.startTransaction(
+            {
+                op: "profile_index",
+                name: "Show profile of ong",
+            },
+            {
+                userId: ong_id
+            }
+        );
 
         try {
             const incidents = await connection('incidents')
