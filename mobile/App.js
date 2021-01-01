@@ -14,6 +14,13 @@ import {Text, StyleSheet} from 'react-native';
 
 import Routes from './src/routes';
 
+import * as Sentry from '@sentry/react-native';
+
+Sentry.init({ 
+  dsn: 'https://ad6d0b5b7846468f82caf666f3109199@o497854.ingest.sentry.io/5576280', 
+});
+
+
 class App extends Component {
   componentDidMount() {
     SplashScreen.hide();
