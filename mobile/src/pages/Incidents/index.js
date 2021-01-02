@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from 'react';
-import {View, Text, Image, TouchableOpacity, FlatList} from 'react-native';
+import {View, Text, Image, FlatList, ActivityIndicator} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
+
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 import logoImg from '../../assets/logo.png';
 import arrowRight from '../../assets/arrow-right.png';
@@ -26,6 +28,7 @@ export default function Incidents() {
 
         setLoading(true);
         if(total>0 & incidents.length == total){
+            setLoading(false);
             return;
         }
         const response = await api.get('inscidents', {
@@ -41,17 +44,17 @@ export default function Incidents() {
     useEffect(() => {
         loadIncidents();
     }, [])
+    
     return (
         <View style={styles.container}>
             <View style={styles.header}>
                 <Image source={logoImg} />
                 <Text style={styles.headerText}>
-                    Total de <Text style={styles.headerTextBold}>{total} casos</Text>.
+                    Total de <Text style={styles.headerTextBold}>{total} casos</Text>
                 </Text>
             </View>
             <Text style={styles.title}>Bem-vindo!</Text>
             <Text style={styles.description}>Escolha um dos casos abaixo e salve o dia.</Text>
-
             <FlatList  
                 data={incidents}
                 style={styles.incidentsList}
@@ -59,6 +62,13 @@ export default function Incidents() {
                 onEndReached={loadIncidents}
                 onEndReachedThreshold={0.2}
                 showsVerticalScrollIndicator={false}
+                ListFooterComponent={() => {
+                    return (
+                        <View style={styles.loading}>
+                            { loading && <ActivityIndicator size="large" color="#e02041" />}
+                        </View>
+                    )
+                }}
                 renderItem={({item: incident}) => (
                     <View style={styles.incident}>
                         <Text style={styles.incidentProperty}>ONG:</Text>
@@ -77,10 +87,9 @@ export default function Incidents() {
                         <TouchableOpacity 
                             style={styles.detailsButton}
                             onPress={() => {navigationToDetail(incident)}}
-                        >   
+                        >
                             <Text style={styles.detailsButtonText}>Ver mais detalhes</Text>
                             <Image source={arrowRight} style={{width: 20, height: 20}}  />
-                            
                         </TouchableOpacity>
                     </View>
                 )}

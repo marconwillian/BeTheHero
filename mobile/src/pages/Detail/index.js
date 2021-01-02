@@ -5,7 +5,7 @@ import logoImg from '../../assets/logo.png';
 import arrowLeft from '../../assets/arrow-left.png';
 
 import styles from './styles';
-import { TouchableOpacity } from 'react-native-gesture-handler';
+import { RectButton, TouchableOpacity } from 'react-native-gesture-handler';
 
 export default function Detail() {
     const navigation = useNavigation();
@@ -29,7 +29,7 @@ export default function Detail() {
     }
 
     return (
-        <View style={styles.conteiner}>
+        <View style={styles.container}>
             <View style={styles.header}>
                 <Image source={logoImg} />
                 <TouchableOpacity onPress={navigateback}>
@@ -39,7 +39,7 @@ export default function Detail() {
 
             <View style={styles.incident}>
                 <Text style={[styles.incidentProperty, {marginTop: 0}]}>ONG:</Text>
-    <Text style={styles.incidentValue}>{incident.name} de {incident.city}/{incident.uf}</Text>
+                <Text style={styles.incidentValue}>{incident.name} de {incident.city}/{incident.uf}</Text>
 
                 <Text style={styles.incidentProperty}>CASO:</Text>
                 <Text style={styles.incidentValue}>{incident.title}</Text>
@@ -58,12 +58,12 @@ export default function Detail() {
                 <Text style={styles.heroDescription}>Entre em contato:</Text>
 
                 <View style={styles.actions}>
-                    <TouchableOpacity style={styles.action} onPress={sendWhatsApp}>
+                    <RectButton rippleColor="#BE2041" style={styles.action} onPress={sendWhatsApp}>
                         <Text style={styles.actionText}>WhatsApp</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={styles.action} onPress={sendMail}>
+                    </RectButton>
+                    <RectButton rippleColor="#BE2041" style={styles.action} onPress={sendMail}>
                         <Text style={styles.actionText}>E-mail</Text>
-                    </TouchableOpacity>
+                    </RectButton>
                 </View>
             </View>
         </View>
