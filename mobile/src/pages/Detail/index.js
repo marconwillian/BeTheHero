@@ -1,11 +1,12 @@
 import React from 'react';
 import {View, Text, Image, Linking} from 'react-native';
 import {useNavigation, useRoute} from '@react-navigation/native';
+import { RectButton, TouchableOpacity } from 'react-native-gesture-handler';
+
 import logoImg from '../../assets/logo.png';
 import arrowLeft from '../../assets/arrow-left.png';
 
 import styles from './styles';
-import { RectButton, TouchableOpacity } from 'react-native-gesture-handler';
 
 export default function Detail() {
     const navigation = useNavigation();
