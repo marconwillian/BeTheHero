@@ -1,0 +1,4 @@
+defaults.url=https://sentry.io/
+defaults.org=mh4sh
+defaults.project=bethehero-mobile
+auth.token=

@@ -4,14 +4,16 @@ require('dotenv').config();
 module.exports = {
 
   development: {
-    client: 'sqlite3',
-    connection: {
-      filename: './src/database/db.sqlite'
-    },
     migrations: {
-      directory: './src/database/migrations'
+        directory: path.resolve(__dirname, 'src', 'database', 'migrations')
     },
-    useNullAsDefault: true,
+    client: 'mysql',
+    connection: {
+        host : process.env.DB_HOST,
+        user : process.env.DB_USER,
+        password : process.env.DB_PASSWORD,
+        database : process.env.DB_DATABASE
+    }
   },
 
   test: {

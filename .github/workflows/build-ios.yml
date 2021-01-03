@@ -1,0 +1,31 @@
+name: Build - IOs
+
+on:
+  push:
+    branches:
+      - 'main'
+    paths:
+      - 'mobile/**'
+
+
+jobs:
+  build-ios:
+    runs-on: macos-latest
+    steps: 
+      - uses: actions/checkout@v2
+      - name: Install yarn dependencies
+        run: |
+          cd mobile && yarn install
+      - name: Install pod dependencies
+        run: |
+          cd mobile/ios && pod install
+      - name: Build app
+        run: |       
+          cd mobile/ios && xcodebuild -workspace myapp.xcworkspace -scheme myapp archive -archivePath myapp.xcarchive -allowProvisioningUpdates
+          xcodebuild -exportArchive -archivePath ./myapp.xcarchive -exportPath . -exportOptionsPlist myapp/Info.plist
+          mv myapp.ipa ../myapp.ipa
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v1
+        with:
+          name: myapp.ipa
+          path: ios/build/

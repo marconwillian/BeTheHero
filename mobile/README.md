@@ -34,6 +34,10 @@
   Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE][license-link] para mais detalhes.
 
 
+  ## Install
+  Primeiro adicionar keys ambiente de sistema.
+  Configurar sentry.properties no android
+
   <!-- Markdown link & img dfn's -->
   [logo-image]: https://i.imgur.com/ftyy51h.png
   [license-image]: https://img.shields.io/badge/License-MIT-yellow.svg

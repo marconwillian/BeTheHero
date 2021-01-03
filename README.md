@@ -1,7 +1,7 @@
   ![BeTheHero][logo-image]
 
   ## Projeto desenvolvido na semana Semana Omnistack 11.0 
-  [![License: MIT][license-image]][license-link] [![Node.js CI](https://github.com/marconwillian/BeTheHero_backend/workflows/Node.js%20CI/badge.svg)](https://github.com/marconwillian/BeTheHero_backend/actions?query=workflow%3A%22Node.js+CI%22)
+  [![License: MIT][license-image]][license-link]<br>
 
   Esse projeto foi feito com a intensão de platicar meus conhecimentos na stack do JavaScript.
   Este projeto foi feito com 3 técnologias basicas, que forão divididas em repositórios diferente, são elas:
@@ -12,7 +12,9 @@
   ****
   ## Visualize o resultado
   - backend: [https://server-bethehero.marconwillian.dev](https://server-bethehero.marconwillian.dev)
+  - backend develop: [https://server-bethehero.marconwillian.dev:8080](https://server-bethehero.marconwillian.dev:8080)
   - frontend: [https://bethehero.marconwillian.dev](https://bethehero.marconwillian.dev)
+  - frontend develop: [https://develop-bethehero.marconwillian.dev](https://develop-bethehero.marconwillian.dev)
   - mobile: [https://play.google.com/store/apps/details?id=dev.mh4sh.betheheros](https://play.google.com/store/apps/details?id=dev.mh4sh.betheheros)
   
   ***

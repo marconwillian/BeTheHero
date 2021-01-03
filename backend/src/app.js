@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const {errors} = require('celebrate');
 const routes = require('./routes');
+const Sentry = require('./config/sentry');
 
 const app = express();
 
@@ -9,8 +10,25 @@ app.use(cors())
 app.use(express.json());
 app.use(routes);
 app.use(errors());
-app.use((req, res) => {
-  res.status(404).json({error: "Sorry can't find that!"})
+app.use((request, response) => {
+    const transaction = Sentry.startTransaction(
+        {
+            op: "not_find",
+            name: "Route not found",
+            data: {
+                path: request.path
+            },
+        }
+    );
+
+    try {
+        return response.status(404).json({error: "Sorry can't find that!"})
+    } catch (error) {
+        Sentry.captureException(error);
+        return response.status(400).json({error: true, message: error});
+    } finally {
+        transaction.finish();
+    }
 })
 
 /**

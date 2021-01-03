@@ -2,7 +2,9 @@
 
   ## Projeto desenvolvido na semana Semana Omnistack 11.0 
   ---
-  [![License: MIT][license-image]][license-link] [![Node.js CI](https://github.com/marconwillian/BeTheHero_backend/workflows/Node.js%20CI/badge.svg)](https://github.com/marconwillian/BeTheHero_backend/actions?query=workflow%3A%22Node.js+CI%22)
+  [![License: MIT][license-image]][license-link]<br>
+  ![Deploy Develop - Test, Build & Redeploy](https://github.com/marconwillian/BeTheHero/workflows/Deploy%20Develop%20-%20Test,%20Build%20&%20Redeploy/badge.svg)<br>
+  ![Deploy - Test, Build & Redeploy](https://github.com/marconwillian/BeTheHero/workflows/Deploy%20-%20Test,%20Build%20&%20Redeploy/badge.svg)<br>
 
   Esse projeto foi feito com a intensão de platicar meus conhecimentos na stack do JavaScript.
   Este projeto foi feito com 3 técnologias basicas, que forão divididas em repositórios diferente, são elas:
@@ -26,11 +28,11 @@
     - [![supertest (latest)](https://img.shields.io/npm/v/supertest/latest?label=SuperTest&style=flat-square)][npm-supertest] | Usado para fazer tste atravez da rota inteira.
     - [![cross-env (latest)](https://img.shields.io/npm/v/cross-env/latest?label=Cross+Env&style=flat-square)][npm-cross-env] | Usado para definir process universais.
 
-
+s
   ## :minidisc: Descrição
   O projeto é uma plataforma para que ongs possão fazer uma conta (Versão desktop), e poder cadastrar os casos que precisa de ajuda, exemplo titulo, descrição e o valor da ajuda, e após o cadastro, estes casos fica disponivel no app mobile para que as pessoas possão visualizar os casos da região e enviar um email ou mensagem no whatsapp para a ong, assim podendo a ajudar.
 
-  Ele foi publicado em: https://bethehero-server.herokuapp.com/
+  Ele foi publicado em: https://server-bethehero.marconwillian.dev, sendo que sua versão em development esta na porta :8080.
   ****
   Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](https://github.com/marconwillian/BeTheHero_backend/blob/master/LICENSE) para mais detalhes.
 

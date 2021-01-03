@@ -1,7 +1,7 @@
 import {StyleSheet} from 'react-native';
 
 export default StyleSheet.create({
-    conteiner: {
+    container: {
         flex: 1,
         paddingHorizontal: 24,
         paddingTop: 20
@@ -33,7 +33,7 @@ export default StyleSheet.create({
         padding: 24,
         borderRadius: 8,
         backgroundColor: "#FFF",
-        marginBottom: 16
+        marginBottom: 16,
     },
     heroTitle: {
         fontWeight: 'bold',
@@ -55,9 +55,10 @@ export default StyleSheet.create({
         backgroundColor: "#e02041",
         borderRadius: 8,
         height: 50,
-        width: 150,
+        width: '48%',
         justifyContent: "center",
         alignItems: "center",
+        overflow: 'hidden',
     },
     actionText: {
         color: "#FFF",
