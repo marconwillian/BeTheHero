@@ -17,7 +17,7 @@ export default function Detail() {
         style: 'currency', currency: 'BRL'
         }).format(incident.value)}`;
 
-    function navigateback() {
+    function navigateBack() {
         navigation.goBack()
     }
 
@@ -33,7 +33,7 @@ export default function Detail() {
         <View style={styles.container}>
             <View style={styles.header}>
                 <Image source={logoImg} />
-                <TouchableOpacity onPress={navigateback}>
+                <TouchableOpacity onPress={navigateBack}>
                     <Image source={arrowLeft} style={{width: 25, height: 25}}  />
                 </TouchableOpacity>
             </View>
